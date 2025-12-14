@@ -116,6 +116,329 @@ const productosBD = [
     { id: 5, nombre: "Vasos de colores", precio: 7000, categoria: "vasos", imagen: "img/vaso sky.jpeg" },
     { id: 6, nombre: "Vasos a elegir", precio: 7000, categoria: "vasos", imagen: "img/vasos varios.jpeg" },
 
+    // --- JABONES ARTESANALES: ROSTRO ---
+    { 
+        id: 501, 
+        nombre: "Jabón Facial Ácido Hialurónico", 
+        precio: 3900, 
+        categoria: "jabones", 
+        subcategoria: "jab-rostro", 
+        imagen: "img/jabon_facial_hialuronico.jpg", 
+        descripcion: "Base de jabón de coco, vitamina E, aceite de coco, manteca de karité y ácido hialurónico." 
+    },
+    { 
+        id: 502, 
+        nombre: "Jabón Facial Arcilla", 
+        precio: 3900, 
+        categoria: "jabones", 
+        subcategoria: "jab-rostro", 
+        imagen: "img/jabon_facial_arcilla.jpg", 
+        descripcion: "Base de jabón de coco, aceite de jojoba, manteca de karité, arcilla blanca." 
+    },
+    { 
+        id: 503, 
+        nombre: "Jabón Facial Arroz Blanco", 
+        precio: 3900, 
+        categoria: "jabones", 
+        subcategoria: "jab-rostro", 
+        imagen: "img/jabon_facial_arroz.jpg", 
+        descripcion: "Coco, aceite de almendras, manteca de karité y polvo de arroz." 
+    },
+    { 
+        id: 504, 
+        nombre: "Jabón Facial Avena", 
+        precio: 3900, 
+        categoria: "jabones", 
+        subcategoria: "jab-rostro", 
+        imagen: "img/jabon_facial_avena.jpg", 
+        descripcion: "Base de jabón de coco, extracto de avena, vitamina E, manteca de Karité, avena en polvo y aceite de almendras." 
+    },
+    { 
+        id: 505, 
+        nombre: "Jabón Facial Té Verde", 
+        precio: 3900, 
+        categoria: "jabones", 
+        subcategoria: "jab-rostro", 
+        imagen: "img/jabon_facial_teverde.jpg", 
+        descripcion: "El té verde está compuesto por taninos y catequinas. Ayuda a combatir el envejecimiento celular, desinflama la piel y reduce el sebo." 
+    },
+
+    // --- JABONES ARTESANALES: CUERPO ---
+    { 
+        id: 510, 
+        nombre: "Jabón Corporal Arcilla Roja", 
+        precio: 4900, 
+        categoria: "jabones", 
+        subcategoria: "jab-cuerpo", 
+        imagen: "img/jabon_corporal_arcilla_roja.jpg", 
+        descripcion: "Limpieza profunda: la arcilla roja ayuda a eliminar impurezas. Hidratación: el aceite de argán proporciona hidratación intensa." 
+    },
+    { 
+        id: 511, 
+        nombre: "Jabón Corporal Caléndula y Avena", 
+        precio: 4900, 
+        categoria: "jabones", 
+        subcategoria: "jab-cuerpo", 
+        imagen: "img/jabon_corporal_calendula.jpg", 
+        descripcion: "La caléndula fomenta la formación de nuevos tejidos. Combinado con la avena da un jabón muy cremoso." 
+    },
+    { 
+        id: 512, 
+        nombre: "Jabón Corporal Centella Asiática", 
+        precio: 4900, 
+        categoria: "jabones", 
+        subcategoria: "jab-cuerpo", 
+        imagen: "img/jabon_corporal_centella.jpg", 
+        descripcion: "Ayuda a estimular la circulación sanguínea y a promover la producción de colágeno." 
+    },
+    { 
+        id: 513, 
+        nombre: "Jabón Corporal Coco", 
+        precio: 4900, 
+        categoria: "jabones", 
+        subcategoria: "jab-cuerpo", 
+        imagen: "img/jabon_corporal_coco.jpg", 
+        descripcion: "Ideal para pieles sensibles, elaborado a base de coco y enriquecido con vitamina E." 
+    },
+    { 
+        id: 514, 
+        nombre: "Jabón Corporal de Cacao", 
+        precio: 4900, 
+        categoria: "jabones", 
+        subcategoria: "jab-cuerpo", 
+        imagen: "img/jabon_corporal_cacao.jpg", 
+        descripcion: "Perfecto para ablandar y nutrir la piel, embellecer zonas secas y actuar contra la flacidez." 
+    },
+    { 
+        id: 515, 
+        nombre: "Jabón Corporal de Café", 
+        precio: 4900, 
+        categoria: "jabones", 
+        subcategoria: "jab-cuerpo", 
+        imagen: "img/jabon_corporal_cafe.jpg", 
+        descripcion: "Exfoliante y regenerador celular. Favorece la regeneración de la piel y la nutre." 
+    },
+    { 
+        id: 516, 
+        nombre: "Jabón Corporal Carbón y Sal", 
+        precio: 4900, 
+        categoria: "jabones", 
+        subcategoria: "jab-cuerpo", 
+        imagen: "img/jabon_corporal_carbon.jpg", 
+        descripcion: "Limpieza profunda, absorbe toxinas y suciedad. Ideal para pieles grasas o con acné." 
+    },
+    { 
+        id: 517, 
+        nombre: "Jabón Corporal de Cúrcuma", 
+        precio: 4900, 
+        categoria: "jabones", 
+        subcategoria: "jab-cuerpo", 
+        imagen: "img/jabon_corporal_curcuma.jpg", 
+        descripcion: "Propiedades antiinflamatorias y antioxidantes. Ayuda a calmar la piel irritada." 
+    },
+    { 
+        id: 518, 
+        nombre: "Jabón Corporal de Oliva", 
+        precio: 4900, 
+        categoria: "jabones", 
+        subcategoria: "jab-cuerpo", 
+        imagen: "img/jabon_corporal_oliva.jpg", 
+        descripcion: "El aceite de oliva contiene elevados niveles de vitamina E y A. Es balsámico y desodorante." 
+    },
+    { 
+        id: 519, 
+        nombre: "Jabón Corporal Eucalipto", 
+        precio: 4900, 
+        categoria: "jabones", 
+        subcategoria: "jab-cuerpo", 
+        imagen: "img/jabon_corporal_eucalipto.jpg", 
+        descripcion: "Ayuda a calmar afecciones cutáneas, irritaciones y heridas. Balsámico." 
+    },
+    { 
+        id: 520, 
+        nombre: "Jabón Corporal Hongo Hidratante", 
+        precio: 4900, 
+        categoria: "jabones", 
+        subcategoria: "jab-cuerpo", 
+        imagen: "img/jabon_corporal_hongo.jpg", 
+        descripcion: "Ayuda al organismo a adaptarse y equilibrarse frente al estrés físico." 
+    },
+    { 
+        id: 521, 
+        nombre: "Jabón Corporal Lavanda", 
+        precio: 4900, 
+        categoria: "jabones", 
+        subcategoria: "jab-cuerpo", 
+        imagen: "img/jabon_corporal_lavanda.jpg", 
+        descripcion: "Actúa como revitalizador de la piel, regenera células y mantiene el tejido firme." 
+    },
+    { 
+        id: 522, 
+        nombre: "Jabón Corporal Malbec", 
+        precio: 4900, 
+        categoria: "jabones", 
+        subcategoria: "jab-cuerpo", 
+        imagen: "img/jabon_corporal_malbec.jpg", 
+        descripcion: "Vinoterapia: aprovecha antioxidantes para combatir radicales libres y el envejecimiento." 
+    },
+    { 
+        id: 523, 
+        nombre: "Jabón Corporal Manzanilla y Aloe", 
+        precio: 4900, 
+        categoria: "jabones", 
+        subcategoria: "jab-cuerpo", 
+        imagen: "img/jabon_corporal_manzanilla.jpg", 
+        descripcion: "El aloe vera es antibacteriano. La manzanilla limpia, tonifica y suaviza." 
+    },
+    { 
+        id: 524, 
+        nombre: "Jabón Corporal Pepitas de Uva", 
+        precio: 4900, 
+        categoria: "jabones", 
+        subcategoria: "jab-cuerpo", 
+        imagen: "img/jabon_corporal_uva.jpg", 
+        descripcion: "Exfoliante. Base de jabón de coco, manteca de cacao y aceite de pepitas de uva." 
+    },
+    { 
+        id: 525, 
+        nombre: "Jabón Corporal Rosa Mosqueta", 
+        precio: 4900, 
+        categoria: "jabones", 
+        subcategoria: "jab-cuerpo", 
+        imagen: "img/jabon_corporal_rosa_mosqueta.jpg", 
+        descripcion: "Nutrientes como retinol y vitamina C. Reparador de la piel y antioxidante." 
+    },
+    { 
+        id: 526, 
+        nombre: "Jabón Corporal Ruda Romero Sándalo", 
+        precio: 4900, 
+        categoria: "jabones", 
+        subcategoria: "jab-cuerpo", 
+        imagen: "img/jabon_corporal_ruda.jpg", 
+        descripcion: "Protección energética diaria. Antibacteriano y antiinflamatorio." 
+    },
+
+    // --- JABONES ARTESANALES: ACCESORIOS ---
+    { 
+        id: 530, 
+        nombre: "Esponja Vegetal Corporal", 
+        precio: 6300, 
+        categoria: "jabones", 
+        subcategoria: "jab-accesorios", 
+        imagen: "img/esponja_vegetal.jpg", 
+        descripcion: "100% natural y compostable. Remueve células muertas y mejora la circulación." 
+    },
+    { 
+        id: 531, 
+        nombre: "Jabonera de Madera", 
+        precio: 3900, 
+        categoria: "jabones", 
+        subcategoria: "jab-accesorios", 
+        imagen: "img/jabonera_madera.jpg", 
+        descripcion: "Madera de pino curada y tratada con aceite de lino." 
+    },
+    { 
+        id: 532, 
+        nombre: "Pad Desmaquillante", 
+        precio: 4900, 
+        categoria: "jabones", 
+        subcategoria: "jab-accesorios", 
+        imagen: "img/pad_desmaquillante.jpg", 
+        descripcion: "Súper suave de 8 cm de diámetro." 
+    },
+    { 
+        id: 533, 
+        nombre: "Sal del Himalaya de Jazmín", 
+        precio: 13000, 
+        categoria: "jabones", 
+        subcategoria: "jab-accesorios", 
+        imagen: "img/sal_himalaya_jazmin.jpg", 
+        descripcion: "" 
+    },
+    { 
+        id: 534, 
+        nombre: "Sal Rosa del Himalaya", 
+        precio: 13000, 
+        categoria: "jabones", 
+        subcategoria: "jab-accesorios", 
+        imagen: "img/sal_rosa_himalaya.jpg", 
+        descripcion: "" 
+    },
+    { 
+        id: 535, 
+        nombre: "Toalla para el Rostro", 
+        precio: 6500, 
+        categoria: "jabones", 
+        subcategoria: "jab-accesorios", 
+        imagen: "img/toalla_rostro.jpg", 
+        descripcion: "Microfibra blanca. Indispensable para tu rutina facial." 
+    },
+
+    // --- JABONES ARTESANALES: KIT REGALOS ---
+    { 
+        id: 540, 
+        nombre: "Box Blend", 
+        precio: 19900, 
+        categoria: "jabones", 
+        subcategoria: "jab-kits", 
+        imagen: "img/box_blend.jpg", 
+        descripcion: "Contiene 4 jabones corporales combinados." 
+    },
+    { 
+        id: 541, 
+        nombre: "Box Dúo", 
+        precio: 10600, 
+        categoria: "jabones", 
+        subcategoria: "jab-kits", 
+        imagen: "img/box_duo.jpg", 
+        descripcion: "Contiene un jabón corporal más un jabón facial." 
+    },
+    { 
+        id: 542, 
+        nombre: "Box Reserva", 
+        precio: 37900, 
+        categoria: "jabones", 
+        subcategoria: "jab-kits", 
+        imagen: "img/box_reserva.jpg", 
+        descripcion: "Caja rígida. Contiene: 1 sal de baño + 2 jabones corporales + 2 jabones faciales." 
+    },
+    { 
+        id: 543, 
+        nombre: "Box Tiny", 
+        precio: 8900, 
+        categoria: "jabones", 
+        subcategoria: "jab-kits", 
+        imagen: "img/box_tiny.jpg", 
+        descripcion: "Jabones para manos con forma de racimos de uvas en frasco." 
+    },
+    { 
+        id: 544, 
+        nombre: "Box Tiny Corazón Celeste", 
+        precio: 8900, 
+        categoria: "jabones", 
+        subcategoria: "jab-kits", 
+        imagen: "img/box_tiny_celeste.jpg", 
+        descripcion: "" 
+    },
+    { 
+        id: 545, 
+        nombre: "Box Tiny Corazón Rojo", 
+        precio: 8900, 
+        categoria: "jabones", 
+        subcategoria: "jab-kits", 
+        imagen: "img/box_tiny_rojo.jpg", 
+        descripcion: "" 
+    },
+    { 
+        id: 546, 
+        nombre: "Box Tiny Corazón Rosa", 
+        precio: 8900, 
+        categoria: "jabones", 
+        subcategoria: "jab-kits", 
+        imagen: "img/box_tiny_rosa.jpg", 
+        descripcion: "" 
+    },
+
     // --- DECO: CASCADAS HUMO ---
     { id: 1101, nombre: "Cascada Humo Buda", precio: 5800, categoria: "deco", subcategoria: "dc-cascadas", imagen: "img/cascada_buda.jpg", descripcion: "" },
     { id: 1102, nombre: "Cascada Humo Caldera Brujo", precio: 6900, categoria: "deco", subcategoria: "dc-cascadas", imagen: "img/cascada_caldera_brujo.jpg", descripcion: "" },
