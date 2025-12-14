@@ -1,0 +1,533 @@
+/* Variables */
+:root {
+    --color-principal: #6a1b9a;
+    --color-secundario: #f3e5f5;
+    --color-texto: #333;
+    --color-blanco: #fff;
+    --borde-radio: 8px;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0 0 120px 0;
+    background-color: #f9f9f9;
+    color: var(--color-texto);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header */
+header {
+    background-color: var(--color-principal);
+    color: var(--color-blanco);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo-container h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+header nav a {
+    color: var(--color-blanco);
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+/* Layout Principal */
+.main-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+    gap: 30px;
+    flex: 1;
+}
+
+/* Sidebar */
+.sidebar {
+    flex: 1;
+    min-width: 200px;
+    background: var(--color-blanco);
+    padding: 20px;
+    border-radius: var(--borde-radio);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    height: fit-content;
+}
+
+.sidebar h3 {
+    margin-top: 0;
+    color: var(--color-principal);
+    border-bottom: 2px solid var(--color-secundario);
+    padding-bottom: 10px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li {
+    padding: 12px 10px;
+    cursor: pointer;
+    border-bottom: 1px solid #eee;
+    transition: 0.2s;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+.sidebar li:hover {
+    color: var(--color-principal);
+    background-color: var(--color-secundario);
+    padding-left: 15px;
+    border-radius: 4px;
+}
+
+/* Catálogo */
+.catalogo {
+    flex: 3;
+}
+
+/* AVISO DE COMPRA (Estilo Dark 108 Caracolas) */
+.aviso-compra {
+    background-color: #212121; /* Fondo negro suave */
+    color: white;              /* Texto blanco */
+    text-align: center;        /* Todo centrado */
+    padding: 25px;
+    margin-bottom: 30px;
+    border-radius: var(--borde-radio);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    border: 1px solid #333;
+}
+
+.aviso-compra i {
+    font-size: 2.5rem;
+    color: #25d366; /* Verde WhatsApp */
+    margin-bottom: 15px;
+    display: block; 
+}
+
+.aviso-compra p {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #eee;
+}
+
+#titulo-seccion {
+    margin-top: 0;
+    color: #444;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+/* Grid Productos */
+.grid-productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+/* Mensaje Vacío */
+.mensaje-vacio {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 50px 20px;
+    background-color: white;
+    border-radius: var(--borde-radio);
+    border: 2px dashed #ddd;
+    color: #777;
+}
+
+.mensaje-vacio i {
+    font-size: 3rem;
+    color: var(--color-principal);
+    margin-bottom: 15px;
+    opacity: 0.5;
+}
+
+.mensaje-vacio p {
+    font-size: 1.1rem;
+    font-style: italic;
+}
+
+/* Tarjeta Producto */
+.producto-card {
+    background: var(--color-blanco);
+    border-radius: var(--borde-radio);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+    max-width: 320px; 
+    margin: 0 auto;
+}
+
+.producto-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+.producto-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: contain;
+    background-color: #fff;
+    border-radius: var(--borde-radio);
+    margin-bottom: 10px;
+}
+
+.producto-card h3 {
+    font-size: 1.1rem;
+    margin: 10px 0;
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.precio {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #444;
+    margin: 10px 0;
+}
+
+.btn-agregar {
+    background-color: var(--color-principal);
+    color: white;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    border-radius: var(--borde-radio);
+    cursor: pointer;
+    margin-top: auto;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.btn-agregar:hover {
+    background-color: #4a148c;
+}
+
+.texto-descripcion {
+    font-size: 0.85rem;
+    color: #666;
+    margin: 0 0 10px 0;
+    font-style: italic;
+    line-height: 1.4;
+    min-height: 60px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden; 
+}
+
+.selector-variedad {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0 15px 0;
+    border: 1px solid #ccc;
+    border-radius: var(--borde-radio);
+    background-color: #fff;
+    font-size: 14px;
+    color: var(--color-texto);
+}
+
+.desc-variedades {
+    font-size: 0.85rem;
+    color: #666;
+    margin: 5px 0;
+    text-align: left;
+    font-weight: bold;
+}
+
+.control-cantidad {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    margin-bottom: 15px;
+}
+
+.btn-qty {
+    background-color: #f0f0f0;
+    color: #333;
+    border: 1px solid #ccc;
+    width: 32px;
+    height: 32px;
+    border-radius: 4px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s;
+}
+
+.btn-qty:hover {
+    background-color: #e0e0e0;
+}
+
+.input-cantidad {
+    width: 40px;
+    text-align: center;
+    font-size: 1.1rem;
+    border: none;
+    background: transparent;
+    font-weight: bold;
+}
+
+/* Grid Subcategorías */
+.grid-subcategorias {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card-subcategoria {
+    background-color: var(--color-secundario);
+    padding: 40px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    flex: 1 1 200px;
+    text-align: center;
+    border: 2px solid transparent;
+    transition: 0.3s;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    max-width: 300px;
+}
+
+.card-subcategoria h3 {
+    margin: 0;
+    color: var(--color-principal);
+}
+
+.card-subcategoria:hover {
+    background-color: var(--color-principal);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+}
+
+.card-subcategoria:hover h3 {
+    color: white;
+}
+
+/* Botones Volver */
+.btn-volver {
+    display: block; 
+    width: fit-content;
+    margin: 40px auto; 
+    background: white;
+    border: 2px solid var(--color-principal);
+    color: var(--color-principal);
+    padding: 12px 30px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: 0.3s;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+.btn-volver:hover {
+    background: var(--color-principal);
+    color: white;
+    transform: translateY(-3px);
+}
+
+/* FOOTER */
+footer {
+    background-color: #333;
+    color: #ccc;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+    margin-top: 50px;
+}
+
+/* Carrito y Modal */
+.cart-icon {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #25d366;
+    color: white;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    cursor: pointer;
+    z-index: 1000;
+    transition: transform 0.3s;
+}
+
+.cart-icon:hover {
+    transform: scale(1.1);
+}
+
+#contador-carrito {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #d32f2f;
+    color: white;
+    border-radius: 50%;
+    width: 22px;
+    height: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    font-weight: bold;
+    border: 2px solid white;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    backdrop-filter: blur(3px);
+}
+
+.modal-content {
+    background-color: white;
+    margin: 5% auto;
+    padding: 25px;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 12px;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.close {
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #aaa;
+}
+
+.close:hover {
+    color: #333;
+}
+
+.total {
+    text-align: right;
+    margin-top: 20px;
+    border-top: 2px solid #eee;
+    padding-top: 15px;
+}
+
+.total h3 {
+    color: var(--color-principal);
+    font-size: 1.5rem;
+}
+
+.btn-whatsapp {
+    background-color: #25d366;
+    color: white;
+    border: none;
+    padding: 15px;
+    width: 100%;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: var(--borde-radio);
+    cursor: pointer;
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    transition: 0.3s;
+}
+
+.btn-whatsapp:hover {
+    background-color: #128c7e;
+}
+
+.btn-seguir {
+    background-color: transparent;
+    border: 2px solid var(--color-principal);
+    color: var(--color-principal);
+    padding: 12px;
+    width: 100%;
+    font-size: 16px;
+    border-radius: var(--borde-radio);
+    cursor: pointer;
+    margin-top: 10px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-seguir:hover {
+    background-color: var(--color-secundario);
+}
+
+.btn-vaciar {
+    background: none;
+    border: none;
+    color: #d32f2f;
+    cursor: pointer;
+    font-size: 0.9rem;
+    text-decoration: underline;
+    margin-top: 10px;
+    display: block;
+    width: 100%;
+    text-align: right;
+    padding: 5px 0;
+}
+
+.btn-vaciar:hover {
+    color: #b71c1c;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column;
+    }
+    .sidebar {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    header {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+    header nav {
+        display: flex;
+        gap: 15px;
+    }
+}

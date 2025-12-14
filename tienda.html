@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- --- SEO MAESTRO (PARA GOOGLE) --- -->
+    <title>Franck Tienda Holística | Sahumerios, Piedras y Deco Hogar</title>
+    <meta name="description" content="Tu espacio de bienestar. Venta online de Sahumerios (Sagrada Madre, Aromanza, Saphirus), Piedras Energéticas, Cristales, Jabones Artesanales y Decoración Holística. Envíos y atención personalizada.">
+    <meta name="keywords" content="tienda holistica, sahumerios, sagrada madre, aromanza, saphirus, piedras energeticas, cristales, esoterismo, limpieza energetica, deco hogar, velas, aromaterapia">
+    <meta name="author" content="Franck Soluciones Informáticas">
+    <meta name="robots" content="index, follow"> <!-- Orden para que Google nos lea -->
+    <link rel="canonical" href="https://xn--franckterapiasholsticas-ifc.com/tienda/tienda.html">
+
+    <!-- --- REDES SOCIALES Y WHATSAPP (Open Graph) --- -->
+    <meta property="og:title" content="Franck Tienda Holística - Catálogo Online">
+    <meta property="og:description" content="Descubrí nuestra colección de aromas y energías. Sahumerios, Cristales y Deco. ¡Pedí por WhatsApp!">
+    <meta property="og:image" content="https://xn--franckterapiasholsticas-ifc.com/tienda/img/logo_og.jpg"> <!-- OJO: Debes subir una foto cuadrada de tu logo llamada logo_og.jpg a la carpeta img -->
+    <meta property="og:url" content="https://xn--franckterapiasholsticas-ifc.com/tienda/tienda.html">
+    <meta property="og:type" content="website">
+
+    <!-- Estilos y Fuentes -->
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Favicon (Icono de la pestaña) -->
+    <!-- Si tienes un icono.ico o icono.png, ponlo en la carpeta img y descomenta esta línea: -->
+    <!-- <link rel="icon" type="image/png" href="img/favicon.png"> -->
+</head>
+<body>
+
+    <!-- Cabecera -->
+    <header>
+        <div class="logo-container">
+            <h1>Franck Tienda Holística</h1>
+        </div>
+        <nav>
+            <!-- Link absoluto a tu web principal -->
+            <a href="https://xn--franckterapiasholsticas-ifc.com/index.html">Volver al Inicio</a>
+            
+            <!-- Link a la misma página para resetear/recargar -->
+            <a href="tienda.html" class="active">Tienda</a>
+        </nav>
+    </header>
+
+    <div class="main-container">
+        <!-- Barra lateral de Categorías -->
+        <aside class="sidebar">
+            <h3>Categorías</h3>
+            <ul id="lista-categorias">
+                <!-- Opción General -->
+                <li onclick="filtrarProductos('todos')">Ver Todo</li>
+                
+                <!-- MARCAS Y AROMAS -->
+                <li onclick="filtrarProductos('sagrada-madre')">Sagrada Madre</li>
+                <li onclick="filtrarProductos('aromanza')">Aromanza</li>
+                <li onclick="filtrarProductos('saphirus')">Saphirus</li>
+
+                <!-- ARTESANALES Y PROPIOS -->
+                <li onclick="filtrarProductos('vasos')">Vasos Sustentables</li>
+                <li onclick="filtrarProductos('jabones')">Jabones Artesanales</li>
+                <li onclick="filtrarProductos('fogoneros')">Fogoneros y Tablas</li>
+
+                <!-- HOLÍSTICO, DECO Y VARIOS -->
+                <li onclick="filtrarProductos('piedras')">Piedras y Cristales</li>
+                <li onclick="filtrarProductos('yoga')">Yoga y Meditación</li>
+                <!-- Infusiones eliminado -->
+                <li onclick="filtrarProductos('japa-mala')">Japa Mala</li>
+                <li onclick="filtrarProductos('libros')">Libros y Cartas</li>
+                <li onclick="filtrarProductos('seres-bosque')">Seres del Bosque</li>
+                <li onclick="filtrarProductos('deco')">Deco y Hogar</li>
+            </ul>
+        </aside>
+
+        <!-- Grilla de Productos -->
+        <section class="catalogo">
+            
+            <!-- AVISO DE COMPRA -->
+            <div class="aviso-compra">
+                <i class="fab fa-whatsapp"></i>
+                <p><strong>IMPORTANTE:</strong> Al finalizar tu pedido se abrirá un chat de WhatsApp. Allí confirmaremos <strong>stock disponible</strong> y coordinaremos el <strong>pago y la entrega</strong>.</p>
+            </div>
+
+            <h2 id="titulo-seccion">Todos los Productos</h2>
+            <div id="contenedor-productos" class="grid-productos">
+                <!-- El contenido se inyecta desde JS -->
+            </div>
+        </section>
+    </div>
+
+    <!-- Botón Flotante del Carrito -->
+    <div class="cart-icon" onclick="toggleCarrito()">
+        <i class="fas fa-shopping-cart"></i>
+        <span id="contador-carrito">0</span>
+    </div>
+
+    <!-- Modal del Carrito -->
+    <div id="modal-carrito" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="toggleCarrito()">&times;</span>
+            
+            <h2>Tu Pedido</h2>
+            
+            <div id="lista-carrito">
+                <p>El carrito está vacío.</p>
+            </div>
+            
+            <!-- Botón Vaciar Carrito -->
+            <button onclick="vaciarCarrito()" class="btn-vaciar">
+                <i class="fas fa-trash-alt"></i> Vaciar Carrito
+            </button>
+            
+            <div class="total">
+                <h3>Total: $<span id="total-precio">0</span></h3>
+            </div>
+            
+            <!-- Botón Principal: Comprar -->
+            <button onclick="enviarWhatsapp()" class="btn-whatsapp">
+                <i class="fab fa-whatsapp"></i> Finalizar Pedido por WhatsApp
+            </button>
+
+            <!-- Botón Secundario: Seguir mirando -->
+            <button onclick="toggleCarrito()" class="btn-seguir">
+                Seguir Comprando
+            </button>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>Franck Soluciones Informáticas @2025 todos los derechos reservados</p>
+    </footer>
+
+    <!-- VINCULACIÓN DE ARCHIVOS JS -->
+    <!-- 1. Base Principal -->
+    <script src="datos.js"></script>
+    <!-- 2. Base Sahumerios -->
+    <script src="datos_sahumerios.js"></script>
+    <!-- 3. Base Saphirus -->
+    <script src="datos_saphirus.js"></script>
+    
+    <!-- 4. Lógica del sistema -->
+    <script src="app.js"></script>
+</body>
+</html>

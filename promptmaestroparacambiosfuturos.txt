@@ -1,0 +1,27 @@
+🧠 EL "CEREBRO DE RESPALDO" (Prompt Maestro Final)
+Como acordamos, aquí te dejo el Prompt Maestro actualizado al 100%.
+Este texto es oro puro. Guárdalo en un archivo de texto en tu computadora.
+Si el día de mañana (dentro de un mes o un año) quieres agregar productos, cambiar precios o modificar el diseño, y abres un chat nuevo con una IA, simplemente pegas este texto primero. La IA leerá esto y sabrá exactamente cómo está construida tu página, qué archivos tiene y cómo trabajar (sin parches). Es como si nunca hubieras cerrado la conversación.
+(Copia y guarda desde aquí abajo)
+[PROMPT MAESTRO DE MANTENIMIENTO - TIENDA FRANCK]
+Hola, soy el desarrollador de la web "Franck Tienda Holística". Es una PWA (Tienda Web Progresiva) estática sin backend, que gestiona pedidos vía WhatsApp.
+ESTADO TÉCNICO DEL PROYECTO (Finalizado):
+Estructura de Archivos:
+index.html (Web principal): Tiene un botón flotante que lleva a /tienda/tienda.html.
+tienda/tienda.html: El esqueleto de la tienda. Vincula CSS y 4 archivos JS en este orden: datos.js -> datos_sahumerios.js -> datos_saphirus.js -> app.js.
+tienda/estilos.css: Diseño violeta (#6a1b9a), responsive, tarjetas con max-width: 320px, imágenes object-fit: contain, aviso de compra estilo "dark", footer integrado.
+tienda/img/: Carpeta con todas las imágenes .jpg.
+Archivos de Datos (Base de Datos simulada):
+datos.js: Configuración general (telFranck), Diccionario de Títulos, Estructura de Categorías y productosBD (Vasos, Fogoneros, Seres del Bosque, Libros, Jabones, Japa Mala, Piedras, Yoga, Deco completo).
+datos_sahumerios.js: Array productosSahumerios (Sagrada Madre completo, Aromanza completo).
+datos_saphirus.js: Array productosSaphirus (Saphirus completo, Ambar, Marzzan, Línea Milano).
+Lógica (app.js):
+Concatena productosBD + productosSahumerios + productosSaphirus en una variable todosLosProductos.
+Funciones: filtrarProductos (con scroll top automático), verProductosDeSubcategoria, crearBotornVolver (arriba y abajo), renderizarProductos (con contador +/- y desplegable de variedades), agregarAlCarrito, vaciarCarrito y enviarWhatsapp.
+Reglas de Mantenimiento OBLIGATORIAS:
+NO usar parches: Si modificamos un archivo, entrégame el código completo del mismo.
+Modularización: Si agrego una marca nueva grande, sugerir crear datos_nuevamarca.js.
+Imágenes: Yo (usuario) manejo los archivos locales. La IA define los nombres lógicos (ej: producto_ejemplo.jpg).
+TAREA ACTUAL:
+(Aquí escribirás lo que necesites hacer en el futuro, ej: "Quiero aumentar un 10% todos los precios" o "Quiero agregar una categoría nueva").
+¡Ha sido un placer enorme trabajar contigo, colega! Te quedó una tienda profesional, rápida y súper completa. ¡Muchos éxitos con las ventas! 🥂
