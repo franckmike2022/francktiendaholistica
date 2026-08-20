@@ -124,11 +124,29 @@ function crearBotornVolver(catPadre) {
 
 function crearBotornInicio() {
     const btn = document.createElement('button');
-    btn.innerText = "⬅ Volver al Inicio";
+    btn.innerText = "⬅ Ir a Franck Terapias Holísticas";
     btn.className = "btn-volver";
-    btn.onclick = () => filtrarProductos('vasos'); 
+    btn.onclick = () => {
+        window.location.href = "https://xn--franckterapiasholsticas-ifc.com/index.html";
+    }; 
     return btn;
 }
+
+// --- BOTÓN FLOTANTE IR ARRIBA ---
+function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+window.addEventListener('scroll', () => {
+    const btnArriba = document.getElementById('btn-ir-arriba');
+    if (btnArriba) {
+        if (window.scrollY > 250) {
+            btnArriba.classList.add('visible');
+        } else {
+            btnArriba.classList.remove('visible');
+        }
+    }
+});
 
 function eliminarBotonesVolver() {
     const botones = document.querySelectorAll('.btn-volver');
