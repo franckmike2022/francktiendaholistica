@@ -210,6 +210,28 @@ header nav a:hover {
     margin: 10px 0;
 }
 
+.cartel-consultar {
+    background-color: #fff3cd;
+    color: #856404;
+    border: 1px solid #ffeeba;
+    border-radius: var(--borde-radio);
+    padding: 8px 10px;
+    margin: 10px 0;
+    font-size: 0.85rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    text-align: center;
+    line-height: 1.3;
+}
+
+.cartel-consultar i {
+    font-size: 1rem;
+    color: #856404;
+}
+
 .btn-agregar {
     background-color: var(--color-principal);
     color: white;

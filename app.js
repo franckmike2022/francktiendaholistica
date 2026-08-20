@@ -168,12 +168,24 @@ function renderizarProductos(lista) {
             htmlDesc = `<p class="texto-descripcion">${prod.descripcion}</p>`;
         }
 
+        let htmlPrecio = '';
+        if (prod.precio > 0) {
+            htmlPrecio = `<p class="precio">$${prod.precio.toLocaleString('es-AR')}</p>`;
+        } else {
+            htmlPrecio = `
+                <div class="cartel-consultar">
+                    <i class="fas fa-info-circle"></i>
+                    <span>Consultar precio, disponibilidad y stock</span>
+                </div>
+            `;
+        }
+
         div.innerHTML = `
             <img src="${prod.imagen}" alt="${prod.nombre}" onerror="this.src='https://via.placeholder.com/200?text=Foto+Pendiente'">
             <h3>${prod.nombre}</h3>
             ${htmlDesc} 
             ${htmlVariedades}
-            <p class="precio">$${prod.precio.toLocaleString('es-AR')}</p> 
+            ${htmlPrecio} 
             
             <div class="control-cantidad">
                 <button class="btn-qty" onclick="cambiarCantidad(${prod.id}, -1)">-</button>
@@ -254,10 +266,15 @@ function actualizarCarritoUI() {
     
     listaCarrito.innerHTML = '';
     let totalPrecio = 0;
+    let hayItemsAConsultar = false;
 
     carrito.forEach((item, index) => {
-        totalPrecio += item.precio * item.cantidad;
+        const itemSubtotal = item.precio * item.cantidad;
+        totalPrecio += itemSubtotal;
+        if (item.precio === 0) hayItemsAConsultar = true;
+
         const nombreMostrar = item.variedadElegida ? `${item.nombre} <strong>(${item.variedadElegida})</strong>` : item.nombre;
+        const textoPrecio = item.precio > 0 ? `$${itemSubtotal.toLocaleString('es-AR')}` : `<span style="color:#d9534f; font-weight:bold; font-size:0.85rem;">Consultar</span>`;
 
         const itemDiv = document.createElement('div');
         itemDiv.style.borderBottom = "1px solid #eee";
@@ -269,13 +286,14 @@ function actualizarCarritoUI() {
         itemDiv.innerHTML = `
             <div style="flex:1"><span style="font-size:0.9rem">${item.cantidad}x ${nombreMostrar}</span></div>
             <div style="display:flex; align-items:center; gap:10px;">
-                <span>$${(item.precio * item.cantidad).toLocaleString('es-AR')}</span>
+                <span>${textoPrecio}</span>
                 <span style="color:red; cursor:pointer;" onclick="eliminarDelCarrito(${index})"><i class="fas fa-trash"></i></span>
             </div>
         `;
         listaCarrito.appendChild(itemDiv);
     });
-    totalPrecioSpan.innerText = totalPrecio.toLocaleString('es-AR');
+    
+    totalPrecioSpan.innerText = totalPrecio > 0 ? totalPrecio.toLocaleString('es-AR') + (hayItemsAConsultar ? ' + a consultar' : '') : (hayItemsAConsultar ? 'A consultar' : '0');
 }
 
 function eliminarDelCarrito(index) {
@@ -295,12 +313,24 @@ function enviarWhatsapp() {
     }
     let mensaje = "Hola Franck Tienda Holística, quiero pedir:%0A%0A";
     let total = 0;
+    let hayItemsAConsultar = false;
+
     carrito.forEach(item => {
         const detalle = item.variedadElegida ? `(${item.variedadElegida})` : "";
-        mensaje += `- ${item.cantidad}x ${item.nombre} ${detalle} ($${item.precio * item.cantidad})%0A`;
-        total += item.precio * item.cantidad;
+        if (item.precio > 0) {
+            mensaje += `- ${item.cantidad}x ${item.nombre} ${detalle} ($${(item.precio * item.cantidad).toLocaleString('es-AR')})%0A`;
+            total += item.precio * item.cantidad;
+        } else {
+            hayItemsAConsultar = true;
+            mensaje += `- ${item.cantidad}x ${item.nombre} ${detalle} (⚠️ Consultar precio/stock)%0A`;
+        }
     });
-    mensaje += `%0A*Total: $${total.toLocaleString('es-AR')}*`;
+
+    if (total > 0) {
+        mensaje += `%0A*Total parcial: $${total.toLocaleString('es-AR')}*${hayItemsAConsultar ? ' (más productos a consultar)' : ''}`;
+    } else {
+        mensaje += `%0A*Productos a consultar precio, disponibilidad y stock*`;
+    }
     mensaje += "%0A%0A¿Hay stock? Gracias.";
     window.open(`https://wa.me/${telFranck}?text=${mensaje}`, '_blank');
 }
