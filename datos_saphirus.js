@@ -6,7 +6,7 @@ const productosSaphirus = [
     { 
         id: 4001, 
         nombre: "Aerosol Ambar", 
-        precio: 4800, 
+        precio: 0, 
         categoria: "saphirus", 
         subcategoria: "sap-aerosoles", 
         imagen: "img/sap_aerosol_ambar.jpg", 
@@ -16,7 +16,7 @@ const productosSaphirus = [
     { 
         id: 4002, 
         nombre: "Aerosol Saphirus", 
-        precio: 6400, 
+        precio: 6000, 
         categoria: "saphirus", 
         subcategoria: "sap-aerosoles", 
         imagen: "img/sap_aerosol_saphirus.jpg", 
@@ -28,7 +28,7 @@ const productosSaphirus = [
     { 
         id: 4101, 
         nombre: "Sandra Marzzan 500cc", 
-        precio: 7900, 
+        precio: 9000, 
         categoria: "saphirus", 
         subcategoria: "sap-textiles", 
         imagen: "img/sap_textil_marzzan.jpg", 
@@ -48,7 +48,7 @@ const productosSaphirus = [
     { 
         id: 4103, 
         nombre: "Textil Ambar", 
-        precio: 2400, 
+        precio: 0, 
         categoria: "saphirus", 
         subcategoria: "sap-textiles", 
         imagen: "img/sap_textil_ambar.jpg", 
@@ -58,7 +58,7 @@ const productosSaphirus = [
     { 
         id: 4104, 
         nombre: "Textil Home 500 cc", 
-        precio: 8800, 
+        precio: 8000, 
         categoria: "saphirus", 
         subcategoria: "sap-textiles", 
         imagen: "img/sap_textil_home.jpg", 
@@ -80,7 +80,7 @@ const productosSaphirus = [
     { 
         id: 4201, 
         nombre: "Difusor Aromático Saphirus", 
-        precio: 6200, 
+        precio: 14000, 
         categoria: "saphirus", 
         subcategoria: "sap-difusores", 
         imagen: "img/sap_difusor_aromatico.jpg", 
@@ -90,7 +90,7 @@ const productosSaphirus = [
     { 
         id: 4202, 
         nombre: "Difusor Aromático Premium", 
-        precio: 13500, 
+        precio: 14000, 
         categoria: "saphirus", 
         subcategoria: "sap-difusores", 
         imagen: "img/sap_difusor_premium.jpg", 
@@ -101,7 +101,7 @@ const productosSaphirus = [
     { 
         id: 4301, 
         nombre: "Tarjeta Aromática x 3", 
-        precio: 6800, 
+        precio: 7000, 
         categoria: "saphirus", 
         subcategoria: "sap-tarjetas", 
         imagen: "img/sap_tarjeta_aromatica.jpg", 
@@ -113,7 +113,7 @@ const productosSaphirus = [
     { 
         id: 4401, 
         nombre: "Aceite Esencial Ambar", 
-        precio: 2000, 
+        precio: 2500, 
         categoria: "saphirus", 
         subcategoria: "sap-aceites", 
         imagen: "img/sap_aceite_ambar.jpg", 
@@ -123,7 +123,7 @@ const productosSaphirus = [
     { 
         id: 4402, 
         nombre: "Aceite Esencial Saphirus", 
-        precio: 3900, 
+        precio: 3700, 
         categoria: "saphirus", 
         subcategoria: "sap-aceites", 
         imagen: "img/sap_aceite_saphirus.jpg", 
@@ -135,7 +135,7 @@ const productosSaphirus = [
     { 
         id: 4501, 
         nombre: "Gel Sensaciones", 
-        precio: 4900, 
+        precio: 3500, 
         categoria: "saphirus", 
         subcategoria: "sap-gel", 
         imagen: "img/sap_gel_sensaciones.jpg", 
@@ -147,7 +147,7 @@ const productosSaphirus = [
     { 
         id: 4601, 
         nombre: "Route 66 (Lata Orgánica)", 
-        precio: 3900, 
+        precio: 0, 
         categoria: "saphirus", 
         subcategoria: "sap-rute66", 
         imagen: "img/sap_route66.jpg", 
@@ -159,7 +159,7 @@ const productosSaphirus = [
     { 
         id: 4701, 
         nombre: "Equipo Analógico (Dispenser)", 
-        precio: 13900, 
+        precio: 16000, 
         categoria: "saphirus", 
         subcategoria: "sap-equipos", 
         imagen: "img/sap_equipo_analogico.jpg", 
@@ -169,7 +169,7 @@ const productosSaphirus = [
     { 
         id: 4702, 
         nombre: "Repuesto Touch", 
-        precio: 3400, 
+        precio: 0, 
         categoria: "saphirus", 
         subcategoria: "sap-equipos", 
         imagen: "img/sap_repuesto_touch.jpg", 
@@ -179,7 +179,7 @@ const productosSaphirus = [
     { 
         id: 4703, 
         nombre: "Touch + Repuesto", 
-        precio: 5500, 
+        precio: 0, 
         categoria: "saphirus", 
         subcategoria: "sap-equipos", 
         imagen: "img/sap_touch_completo.jpg", 
@@ -210,7 +210,7 @@ const productosSaphirus = [
     { 
         id: 4901, 
         nombre: "Sahumerio Himalaya", 
-        precio: 2800, 
+        precio: 3000, 
         categoria: "saphirus", 
         subcategoria: "sap-sahumerios", 
         imagen: "img/sap_sahumerio_himalaya.jpg", 
@@ -222,7 +222,7 @@ const productosSaphirus = [
     { 
         id: 5001, 
         nombre: "Parfums Saphirus (Simil)", 
-        precio: 6900, 
+        precio: 7000, 
         categoria: "saphirus", 
         subcategoria: "sap-parfum", 
         imagen: "img/sap_parfum.jpg", 
@@ -260,7 +260,7 @@ const productosSaphirus = [
     { 
         id: 5202, 
         nombre: "Shimy Limpia Superficies", 
-        precio: 2100, 
+        precio: 0, 
         categoria: "saphirus", 
         subcategoria: "sap-limpiadores", 
         imagen: "img/sap_shimy.jpg", 
@@ -281,7 +281,7 @@ const productosSaphirus = [
     { 
         id: 5302, 
         nombre: "Repelente Red 60ml", 
-        precio: 3000, 
+        precio: 0, 
         categoria: "saphirus", 
         subcategoria: "sap-repelentes", 
         imagen: "img/sap_repelente_60.jpg", 
@@ -290,7 +290,7 @@ const productosSaphirus = [
     { 
         id: 5303, 
         nombre: "Repelente Red Aerosol", 
-        precio: 5500, 
+        precio: 0, 
         categoria: "saphirus", 
         subcategoria: "sap-repelentes", 
         imagen: "img/sap_repelente_aerosol.jpg", 
