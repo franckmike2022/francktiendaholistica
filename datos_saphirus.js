@@ -16,7 +16,7 @@ const productosSaphirus = [
     { 
         id: 4002, 
         nombre: "Aerosol Saphirus", 
-        precio: 6000, 
+        precio: 8000, 
         categoria: "saphirus", 
         subcategoria: "sap-aerosoles", 
         imagen: "img/sap_aerosol_saphirus.jpg", 
@@ -38,7 +38,7 @@ const productosSaphirus = [
     { 
         id: 4102, 
         nombre: "Textil 250 cc (Saphirus)", 
-        precio: 4400, 
+        precio: 5000, 
         categoria: "saphirus", 
         subcategoria: "sap-textiles", 
         imagen: "img/sap_textil_250.jpg", 
@@ -123,7 +123,7 @@ const productosSaphirus = [
     { 
         id: 4402, 
         nombre: "Aceite Esencial Saphirus", 
-        precio: 3700, 
+        precio: 4000, 
         categoria: "saphirus", 
         subcategoria: "sap-aceites", 
         imagen: "img/sap_aceite_saphirus.jpg", 
